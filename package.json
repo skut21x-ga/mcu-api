@@ -1,0 +1,29 @@
+{
+  "name": "mcu-express-api",
+  "version": "1.0.0",
+  "description": "Express Based API of Marvel Cinematic Universe Characters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skut21x-ga/mcu-api.git"
+  },
+  "keywords": [
+    "marvel",
+    "mcu"
+  ],
+  "author": "scott kutler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skut21x-ga/mcu-api/issues"
+  },
+  "homepage": "https://github.com/skut21x-ga/mcu-api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "node-fetch": "^2.6.0"
+  }
+}
