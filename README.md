@@ -1,17 +1,56 @@
-# mcu-api
+# MCU API
 
-Express Based API of a Dataset of Marvel Cinematic Universe Characters
+## Express Based API of a Dataset of Marvel Cinematic Universe Characters
 
-Downloaded from https://www.kaggle.com/apriandito/mcu-characters
-Kaggle's MCU Characters CSV from : https://www.kaggle.com/apriandito/mcu-characters and it's from an original dataset from Kamis Data Program - R Indonesia: https://github.com/indo-r/kamisdata). All characters are owned and copywrite by Marvel.
+#### Installed:
 
-I utilized a CSV to JSON converter (https://csvjson.com/csv2json) to convert out a JSON from the CSV dataset.
+- Mongoose
+- Node-Fetch
+- Body-Parser
+- Express
 
-Installed:
-Mongoose
-Node-Fetch
-Body-Parser
-Express
+#
 
-Available Fetch Parameters:
-Name, Category (Hero / Villain), Species (ie. Human), or Affiliation (ie. S.H.I.E.L.D.)
+#### How to Run:
+
+1. Run 'npm install' in root folder
+2. Run "node seed.js" in lib/db folder
+3. Run "node index.js" in lib folder
+   (this will start the server listening on port 3000)
+
+#
+
+#### Routes Utilized:
+
+- GET ("/") for all characters
+- GET ("/name/:name") to search by Full Name
+- GET ("/category/:category" to search by category
+- GET ("/species/:species" to search by species
+- GET ("/affiliation/:affiliation" to search by affiliation
+- POST ("/") to create a new character
+- PUT ("/name/:name") to search for a character by full name and edit that character
+- DELETE ("/name/:name") to search for a character by full name and delete that character
+
+#
+
+#### Available Parameters:
+
+- Real Name (ie. "Stephen Vincent Strange", "Matthew Michael Murdock")
+- Category (ie "Hero", "Villain"),
+
+- Species (ie. "Human", "Inhuman"),
+- Affiliation (ie. "S.H.I.E.L.D.", "Hydra")
+
+#
+
+#
+
+#
+
+#### Resources Used
+
+##### Kaggle's MCU Characters CSV from: https://www.kaggle.com/apriandito/mcu-characters
+
+##### Original dataset from Kamis Data Program - R Indonesia: https://github.com/indo-r/kamisdata. All characters are owned and copywrite by Marvel.
+
+##### Utilized a CSV to JSON converter to convert to JSON from the Kaggle CSV dataset: https://csvjson.com/csv2json
