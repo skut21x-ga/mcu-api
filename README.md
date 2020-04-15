@@ -23,27 +23,57 @@
 #### Routes Utilized:
 
 - GET ("/") for all characters
+  - ie. GET "http://localhost:3000/"
+  #
 - GET ("/name/:name") to search by Full Name
+  - ie. GET "http://localhost:3000/name/Stephen Vincent Strange" to see Stephen's object
+  #
 - GET ("/category/:category" to search by category
+  - ie. GET "http://localhost:3000/category/Hero" to see all heroes
+  #
 - GET ("/species/:species" to search by species
+  - ie. http://localhost:3000/species/Human" to see all humans
+  #
 - GET ("/affiliation/:affiliation" to search by affiliation
-- POST ("/") to create a new character
-- PUT ("/name/:name") to search for a character by full name and edit that character
+  ie. http://localhost:3000/affiliation/HYDRA" to see all members of HYDRA affiliation
+
+#
+
+- POST ("/") to create a new character in db
+
+  - For example, the following example code can go into Body as RAW input (JSON Format) for a POST to "http://localhost:3000/".
+
+```   
+ {"category": "Hero",
+       "real_name": "Scott Kutler",
+       "alias": "Super Scott",
+       "species": "Human",
+       "affiliation": "S.H.I.E.L.D."}
+```
+
+#
+
+- PUT ("/name/:name") to search for a character by full name and edit that character ()
+  - For example, PUT to "http://localhost:3000/name/Jensen" the following code (in Body as RAW input (JSON Format) will update Jensen's entry.
+
+```
+ {   "alias": "Super Jensen",
+       "species": "Inhuman"     }
+```
+
+#
+
 - DELETE ("/name/:name") to search for a character by full name and delete that character
+  - For example, send DELETE to "http://localhost:3000/name/Jensen" will delete Jensen's entry
 
 #
 
 #### Available Parameters:
 
-- Real Name (ie. "Stephen Vincent Strange", "Matthew Michael Murdock")
+- Real Name (ie. "Stephen Vincent Strange", "Jensen")
 - Category (ie "Hero", "Villain"),
-
 - Species (ie. "Human", "Inhuman"),
 - Affiliation (ie. "S.H.I.E.L.D.", "HYDRA")
-
-#
-
-#
 
 #
 
