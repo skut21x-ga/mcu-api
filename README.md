@@ -12,3 +12,6 @@ Mongoose
 Node-Fetch
 Body-Parser
 Express
+
+Available Fetch Parameters:
+Name, Category (Hero / Villain), Species (ie. Human), or Affiliation (ie. S.H.I.E.L.D.)
