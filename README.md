@@ -39,7 +39,7 @@
 - Category (ie "Hero", "Villain"),
 
 - Species (ie. "Human", "Inhuman"),
-- Affiliation (ie. "S.H.I.E.L.D.", "Hydra")
+- Affiliation (ie. "S.H.I.E.L.D.", "HYDRA")
 
 #
 
