@@ -1,15 +1,8 @@
-# MCU API
+# Marvel Cinematic Universe (MCU) API
 
-## Express Based API of a Dataset of Marvel Cinematic Universe Characters
+##### This is a Marvel Cinematic Universe (MCU) API server that provides information on character's in Marvel's (https://www.marvel.com) movies and tv shows. For this API, there is no auth key needed.
 
-#### Installed:
-
-- Mongoose
-- Node-Fetch
-- Body-Parser
-- Express
-
-#
+##
 
 #### How to Run:
 
@@ -17,6 +10,15 @@
 2. Run "node seed.js" in lib/db folder
 3. Run "node index.js" in lib folder
    (this will start the server listening on port 3000)
+
+#
+
+#### API Utilizes:
+
+- Mongoose
+- Node-Fetch
+- Body-Parser
+- Express
 
 #
 
@@ -84,3 +86,5 @@
 ##### Original dataset from Kamis Data Program - R Indonesia: https://github.com/indo-r/kamisdata. All characters are owned and copywrite by Marvel.
 
 ##### Utilized a CSV to JSON converter to convert to JSON from the Kaggle CSV dataset: https://csvjson.com/csv2json
+
+##### Utilized Swagger to create Swagger JSON & YAML (http://swagger.io/)
