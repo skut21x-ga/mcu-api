@@ -1,0 +1,191 @@
+swagger: "2.0"
+info:
+  description: "This is a Marvel Cinematic Universe (MCU) API server that provides information on character's in [Marvel](https://www.marvel.com)'s movies and tv shows. For this API, there is no auth key needed. I utilized a [CSV to JSON converter](https://csvjson.com/csv2json) to convert data from a [Kaggle dataset](https://www.kaggle.com/apriandito/mcu-characters) which sourced from a dataset at [Kamis Data Program Indonesia](https://github.com/indo-r/kamisdata). All characters are owned and copywrite by [Marvel](https://www.marvel.com). This API documentation was written via Swagger at [http://swagger.io](http://swagger.io)."
+  version: "1.0.0"
+  title: "Marvel Cinematic University (MCU) API"
+  contact:
+    email: "scott.kutler@gmail.com"
+  license:
+    name: "Scott Kutler GitHub Repo"
+    url: "http://www.github.com/skut21x-ga"
+externalDocs:
+  description: "Original MCU dataset from Kamis Data Program"
+  url: "https://github.com/indo-r/kamisdata"
+tags:
+- name: "/"
+  description: "Operation for viewing all characters"
+- name: "name"
+  description: "Operation(s) for characters via their name"
+- name: "category"
+  description: "Operation(s) for characters via their category"
+- name: "species"
+  description: "Operation(s) for characters via their species"
+- name: "affiliation"
+  description: "Operations(s) for characters via their affiliation"
+schemes:
+- "https"
+- "http"
+paths:
+  /:
+    get:
+      tags:
+      - "/"
+      summary: "View all characters in database"
+      description: "ie. GET '/' to see all characters"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "failed operation"
+    post:
+      tags:
+      - "/"
+      summary: "Post new character(s) to database"
+      description: "Raw JSON input can be entered into the body to post to the db a new character"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "failed operation"
+  /name/:name:
+    get:
+      tags:
+      - "name"
+      summary: "Search for character by their full name"
+      description: "ie. GET '/name/Jensen' to see Jenson's entry"
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "The character's full name"
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid tag value"
+    put:
+      tags:
+      - "name"
+      summary: "Update an existing character via name"
+      description: "ie. PUT to '/name/Jensen' will update Jensen's entry." 
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "Character's name that needs to be searched for and edited."
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid tag value"
+    delete:
+      tags:
+      - "name"
+      summary: "Delete an existing character via name"
+      description: "ie. DELETE to '/name/Jensen' will delete Jensen's entry." 
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "Character's name that needs to be searched for and deleted."
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid tag value"
+  /category/:category:
+    get:
+      tags:
+      - "category"
+      summary: "View all characters based on their 'Hero' or 'Villain' status"
+      description: "ie. GET '/category/Hero' to see all heroes"
+      parameters:
+      - name: "category"
+        in: "query"
+        description: "The character's Hero or Villain category"
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid tag value"
+  /species/:species:
+    get:
+      tags:
+      - "species"
+      summary: "View all characters based on their species"
+      description: "ie. GET '/species/Human' to view all humans in db"
+      parameters:
+      - name: "species"
+        in: "query"
+        description: "The character's specific species"
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid tag value"
+  /affiliation/:affiliation:
+    get:
+      tags:
+      - "affiliation"
+      summary: "View all characters based on their affiliation"
+      description: "ie. GET '/affiliation/HYDRA' to view characters with HYDRA affiliation"
+      parameters:
+      - name: "affiliation"
+        in: "query"
+        description: "The character's specific affiliation"
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid tag value"
+definitions:
+  Character Model:
+    type: "object"
+    properties:
+       category:
+        type: "string"
+       real_name:
+        type: "string"
+       alias: 
+        type: "string"
+       title: 
+        type: "string"
+       affiliation:
+        type: "string"
+       citizenship: 
+        type: "string"
+       date_of_birth: 
+        type: "string"
+       date_of_death:
+        type: "string"
+       species:
+        type: "string"
+       gender: 
+        type: "string"
+       status: 
+        type: "string"
+       clearance:
+        type: "string"
+       comic: 
+        type: "string"
+       game: 
+        type: "string"
+       movie:
+        type: "string"
+       one_shot: 
+        type: "string"
+       portrayed_by: 
+        type: "string"
+       ser_no: 
+        type: "string"
+       tv_series: 
+        type: "string"
+       voiced_by: 
+        type: "string"
+       web_series:
+        type: "string"
+    xml:
+      name: "Character Model"

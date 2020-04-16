@@ -22,11 +22,11 @@
 
 #### Routes Utilized:
 
-- GET ("/") for all characters
+- GET ("/") for all character entries in the MCU DB
   - ie. GET "http://localhost:3000/"
   #
-- GET ("/name/:name") to search by Full Name
-  - ie. GET "http://localhost:3000/name/Stephen Vincent Strange" to see Stephen's object
+- GET ("/name/:real_name") to search by Full Name
+  - ie. GET "http://localhost:3000/name/Jensen" to see Jenson's entry
   #
 - GET ("/category/:category" to search by category
   - ie. GET "http://localhost:3000/category/Hero" to see all heroes
