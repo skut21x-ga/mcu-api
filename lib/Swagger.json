@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This is a Marvel Cinematic Universe (MCU) API server that provides information on character's in [Marvel](https://www.marvel.com)'s movies and tv shows. For this API, there is no auth key needed. I utilized a [CSV to JSON converter](https://csvjson.com/csv2json) to convert data from a [Kaggle dataset](https://www.kaggle.com/apriandito/mcu-characters) which sourced from a dataset at [Kamis Data Program Indonesia](https://github.com/indo-r/kamisdata). All characters are owned and copywrite by [Marvel](https://www.marvel.com). This API documentation was written via Swagger at [http://swagger.io](http://swagger.io).",
+    "description": "This is a Marvel Cinematic Universe (MCU) API server that provides information on character's in [Marvel](https://www.marvel.com)'s movies and tv shows. For this API, there is no auth key needed. I utilized a [CSV to JSON converter](https://csvjson.com/csv2json) to convert data from a [Kaggle dataset](https://www.kaggle.com/apriandito/mcu-characters) which sourced from a dataset at [Kamis Data Program Indonesia](https://github.com/indo-r/kamisdata). All characters are owned and copywrite by [Marvel](https://www.marvel.com). This API documentation was written via Swagger at [http://swagger.io](http://swagger.io). API may be accessed at [https://scott-mcu-api.herokuapp.com](https://scott-mcu-api.herokuapp.com) also.",
     "version": "1.0.0",
     "title": "Marvel Cinematic University (MCU) API",
     "contact": {
@@ -38,16 +38,11 @@
       "description": "Operations(s) for characters via their affiliation"
     }
   ],
-  "schemes": [
-    "https",
-    "http"
-  ],
+  "schemes": ["https", "http"],
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "/"
-        ],
+        "tags": ["/"],
         "summary": "View all characters in database",
         "description": "ie. GET '/' to see all characters",
         "responses": {
@@ -60,9 +55,7 @@
         }
       },
       "post": {
-        "tags": [
-          "/"
-        ],
+        "tags": ["/"],
         "summary": "Post new character(s) to database",
         "description": "Raw JSON input can be entered into the body to post to the db a new character",
         "responses": {
@@ -77,9 +70,7 @@
     },
     "/name/:name": {
       "get": {
-        "tags": [
-          "name"
-        ],
+        "tags": ["name"],
         "summary": "Search for character by their full name",
         "description": "ie. GET '/name/Jensen' to see Jenson's entry",
         "parameters": [
@@ -100,9 +91,7 @@
         }
       },
       "put": {
-        "tags": [
-          "name"
-        ],
+        "tags": ["name"],
         "summary": "Update an existing character via name",
         "description": "ie. PUT to '/name/Jensen' will update Jensen's entry.",
         "parameters": [
@@ -123,9 +112,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "name"
-        ],
+        "tags": ["name"],
         "summary": "Delete an existing character via name",
         "description": "ie. DELETE to '/name/Jensen' will delete Jensen's entry.",
         "parameters": [
@@ -148,9 +135,7 @@
     },
     "/category/:category": {
       "get": {
-        "tags": [
-          "category"
-        ],
+        "tags": ["category"],
         "summary": "View all characters based on their 'Hero' or 'Villain' status",
         "description": "ie. GET '/category/Hero' to see all heroes",
         "parameters": [
@@ -173,9 +158,7 @@
     },
     "/species/:species": {
       "get": {
-        "tags": [
-          "species"
-        ],
+        "tags": ["species"],
         "summary": "View all characters based on their species",
         "description": "ie. GET '/species/Human' to view all humans in db",
         "parameters": [
@@ -198,9 +181,7 @@
     },
     "/affiliation/:affiliation": {
       "get": {
-        "tags": [
-          "affiliation"
-        ],
+        "tags": ["affiliation"],
         "summary": "View all characters based on their affiliation",
         "description": "ie. GET '/affiliation/HYDRA' to view characters with HYDRA affiliation",
         "parameters": [

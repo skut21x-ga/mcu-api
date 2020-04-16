@@ -1,15 +1,21 @@
 # Marvel Cinematic Universe (MCU) API
 
-##### This is a Marvel Cinematic Universe (MCU) API server that provides information on character's in Marvel's (https://www.marvel.com) movies and tv shows. For this API, there is no auth key needed. Swagger Documentation is available in the root directory in JSON format and as index.html
+##### This is a Marvel Cinematic Universe (MCU) API server that provides information on character's in Marvel's (https://www.marvel.com) movies and tv shows. For this API, there is no auth key needed. Swagger Documentation is available in the root directory in JSON format and PDF.
 
 ##
 
-#### How to Run:
+#### How to install dependencies and Run locally:
 
-1. Run 'npm install' in root folder
+1. Run 'npm install' in mcu-api root folder
 2. Run "node seed.js" in lib/db folder
 3. Run "node index.js" in lib folder
-   (this will start the server listening on port 3000)
+   (this will start the server listening on port 8080)
+
+#
+
+#### API Can be run server-side at:
+
+#### https://scott-mcu-api.herokuapp.com/
 
 #
 
@@ -19,13 +25,15 @@
 - Node-Fetch
 - Body-Parser
 - Express
+- Heroku
+- MongoDB / Atlas
 
 #
 
 #### Routes Utilized:
 
 - GET ("/") for all character entries in the MCU DB
-  - ie. GET "http://localhost:3000/"
+  - ie. GET "http://localhost:3000/" or "https://scott-mcu-api.herokuapp.com/"
   #
 - GET ("/name/:real_name") to search by Full Name
   - ie. GET "http://localhost:3000/name/Jensen" to see Jenson's entry
